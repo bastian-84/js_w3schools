@@ -1,4 +1,23 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v27/KFOkCnqEu92Fr1MmgWxP.ttf) format('truetype');
+}
 body {
-    background: darkblue;
-    color: white;
+  background: #003;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  /* flex */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+small {
+  margin: 2vh 0 5vh;
+}
+small a:visited {
+  color: #06f;
 }
