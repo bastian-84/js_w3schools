@@ -37,5 +37,65 @@ console.log(sString2.search('locate'));
 // ====================================================== //
 let sString3 = 'Apple, Banana, Kiwi';
 console.log(sString3.slice(2, 16));
-console.log(sString3.slice(-14, -4));
+console.log(sString3.slice(-14, -1));
 
+console.log(sString3.substring(5,12));
+var n = sString3.replace('Apple', 'Cherry');
+console.log(n);
+
+// ====================================================== //
+// ================= String Formatierung ================ //
+// ====================================================== //
+let sString4 = 'Hello World';
+let text2 = sString4.toLowerCase();
+console.log(text2);
+
+let text3 = 'Hello ';
+let text4 = 'World';
+let text5 = text3.concat(text4);
+console.log(text5);
+
+let text6 = '      text6        ';
+console.log(text6);
+let text7 = text6.trim();
+console.log(text7);
+
+// ====================================================== //
+// ======================= pad( ) ======================= //
+// ====================================================== //
+
+let text8 = '5';
+text8 = text8.padStart(6,7);        // Füge 5x vorne eine 7 an
+console.log(text8);     // outputs 777775
+
+let text9 = '5';
+text9 = text9.padEnd(6,7);        // Füge 5x hinten eine 7 an
+console.log(text9);     // outputs 577777
+
+// ====================================================== //
+// ====================== charAt( ) ===================== //
+// ====================================================== //
+let text10 = "Hello World";
+console.log(text10.charAt(6));      // Gebe Wert an index 6 aus
+// Outputs W
+
+console.log(text10.charCodeAt(6));  // Gibt charcode aus
+
+// ====================================================== //
+// =================== String = Array =================== //
+// ====================================================== //
+text10 = "Hello World";
+
+console.log(text10[6]);     // Gebe Wert aus an index XY
+
+// ====================================================== //
+// ==================== String to arr =================== //
+// ====================================================== //
+// ====================================================== //
+// ======================= " csv" ======================= //
+// ====================================================== //
+let text11 = 'a, b, c, d, e';
+
+let arr11 = text11.split(',');
+console.log(arr11[1]);
+// outputs b
