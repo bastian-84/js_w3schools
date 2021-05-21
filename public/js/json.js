@@ -1,3 +1,4 @@
+"use strict";
 // ##################################################################### //
 // ########################## Hilfsfunktionen ########################## //
 // ##################################################################### //
@@ -15,35 +16,24 @@ var fnGetEl = (param1) => {
 // ##################################################################### //
 
 // ====================================================== //
-// ================== Objects =========================== //
-// ====================================================== //
-const pistol = {
-    type: 'SA',
-    model: '9 mm',
-    color: 'Sig-Blue'
-}
-let sModel = pistol.model;
-console.log(sModel);
-
-
-// ====================================================== //
-// ======================= delete ======================= //
+// ================== json, ext. .json ================== //
 // ====================================================== //
 
-delete pistol.model;
-console.log(`Type = ` + pistol.type + `, Model = ` + pistol.model + `, Color = ` + pistol.color);
+//"use strict"; // OBEN EINGESETZT
 
+// Siehe Evernote https://www.evernote.com/shard/s423/nl/73470048/6c10bcaa-6c85-4871-8ee1-51ccd78ee5c0?title=%5B.json%201%5D%20Auslesen%20ext.%20.json%20file
+
+// Es wird ein php Server (lokal gebraucht)
 
 // ====================================================== //
-// =============== add property to Object =============== //
+// =================== w3Schools Bsp. =================== //
 // ====================================================== //
-var oPerson10 = {
-    firstName: "John",
-    lastName: "Doe",
-    language: "EN"
-};
-Object.defineProperty(oPerson10, 'year', {
-    value : "2008"
-});
+let sText = '{"employees":[' +
+    '{"firstName":"John","lastName":"Doe" },' +
+    '{"firstName":"Anna","lastName":"Smith" },' +
+    '{"firstName":"Peter","lastName":"Jones" }]}';
 
-console.log(oPerson10.year);
+let jObj = JSON.parse(sText);
+
+let sOutput = jObj.employees[1].firstName + ' ' + jObj.employees[1].lastName;
+console.log(sOutput);

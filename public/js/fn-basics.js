@@ -35,3 +35,30 @@ let doThis4 = () => {
 doThis3();
 doThis4();
 
+// ====================================================== //
+// =============== Zeige Anzahl Parameter =============== //
+// ====================================================== //
+/* let fn2 = (paramA, paramB, paramC) => {
+    return arguments.length;
+} */
+function fn2(paramA, paramB, paramC){
+    return arguments.length;
+}
+console.log(fn2(1, 2, 3));      
+
+
+
+// ====================================================== //
+// ================= fn param to String ================= //
+// ====================================================== //
+let fn3 = (paramA, paramB) => {
+    return paramA * paramB;
+}
+console.log(fn3(2,2));
+let iX = fn3(2,2);
+console.log(iX);
+let iY = iX.toString(iX);
+console.log(iY);
+console.log(typeof(iY));
+
+console.log(fn3.toString());

@@ -13,37 +13,50 @@ var fnGetEl = (param1) => {
 // ##################################################################### //
 // ################################ Code ############################### //
 // ##################################################################### //
+let sOutput01 = fnGetEl('output01');
 
 // ====================================================== //
-// ================== Objects =========================== //
+// ================== form validation =================== //
 // ====================================================== //
-const pistol = {
-    type: 'SA',
-    model: '9 mm',
-    color: 'Sig-Blue'
+
+let sB2 = fnGetEl('b2');
+
+
+let fnVerify = () => {
+    let sTxt;
+
+    let sX = fnGetEl('sFormNumber').value;
+    console.log(sX);
+
+    if(isNaN(sX) || sX < 1 || sX > 10){
+        sTxt = 'Input not valid.';
+    }else{
+        sTxt = 'Input OK';
+    }
+    sOutput01.innerHTML = sTxt;
+
 }
-let sModel = pistol.model;
-console.log(sModel);
+sB2.addEventListener('click', fnVerify);
 
 
 // ====================================================== //
-// ======================= delete ======================= //
+// ================== form validation =================== //
+// ================== checkValidity( ) ================== //
 // ====================================================== //
 
-delete pistol.model;
-console.log(`Type = ` + pistol.type + `, Model = ` + pistol.model + `, Color = ` + pistol.color);
+let sB3 = fnGetEl('b3');
 
 
-// ====================================================== //
-// =============== add property to Object =============== //
-// ====================================================== //
-var oPerson10 = {
-    firstName: "John",
-    lastName: "Doe",
-    language: "EN"
-};
-Object.defineProperty(oPerson10, 'year', {
-    value : "2008"
-});
+let fnVerify2 = () => {
+   let inpObj = fnGetEl('id1');
+   if(!inpObj.checkValidity()){
+    sOutput01.innerHTML = inpObj.validationMessage;
+   }else{
+    sOutput01.innerHTML = 'Input OK.';
+   }
+    
 
-console.log(oPerson10.year);
+}
+sB3.addEventListener('click', fnVerify2);
+
+

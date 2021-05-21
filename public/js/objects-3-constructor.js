@@ -13,37 +13,23 @@ var fnGetEl = (param1) => {
 // ##################################################################### //
 // ################################ Code ############################### //
 // ##################################################################### //
+let sOutput01 = fnGetEl('output01');
 
 // ====================================================== //
-// ================== Objects =========================== //
-// ====================================================== //
-const pistol = {
-    type: 'SA',
-    model: '9 mm',
-    color: 'Sig-Blue'
-}
-let sModel = pistol.model;
-console.log(sModel);
-
-
-// ====================================================== //
-// ======================= delete ======================= //
+// ================== SIEHE constructor.js ================== //
 // ====================================================== //
 
-delete pistol.model;
-console.log(`Type = ` + pistol.type + `, Model = ` + pistol.model + `, Color = ` + pistol.color);
-
-
 // ====================================================== //
-// =============== add property to Object =============== //
+// ===================== Widerholung ==================== //
 // ====================================================== //
-var oPerson10 = {
-    firstName: "John",
-    lastName: "Doe",
-    language: "EN"
-};
-Object.defineProperty(oPerson10, 'year', {
-    value : "2008"
-});
 
-console.log(oPerson10.year);
+function oPerson(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+  }
+
+let oCharacter1 = new oPerson('Claire', 'Redfield', 24, 'brown');
+console.log(oCharacter1.age);
+
