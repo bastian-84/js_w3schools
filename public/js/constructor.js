@@ -121,3 +121,15 @@ let x5 = '';
 x5 = 'String...';
 
 console.log(x5);
+
+// ====================================================== //
+// =================== fn constructor =================== //
+// ====================================================== //
+function fn11(param1, param2){
+    this.firstName = param1;
+    this.lastName = param2;
+}
+
+let sX11 = new fn11('Claire', 'Redfield');
+
+console.log(sX11.firstName);

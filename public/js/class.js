@@ -67,3 +67,77 @@ console.log(`Jahre zwischen Erscheinungs Jahr und aktuellem Jahr: ` + sDX1.fnYea
 let sDate = new Date();
 let sCurrentYear = sDate.getFullYear();
 console.log(`Jahre zwischen Ingame Year und aktuellem Jahr: ` + sDX1.fnYearsDifferenceCurrentYear(sCurrentYear) + ` Jahre.`);
+
+// ====================================================== //
+// ==================== class extends =================== //
+// ====================================================== //
+class Carbine {
+    constructor(sBrand){
+        this.sCarbName = sBrand;
+    }
+    fnPresent(){
+        return 'The shop has: ' + this.sCarbName;
+    }
+}
+
+class Model extends Carbine {
+    constructor(sBrand, sMod){      // sBrand aus Carbine, sMod aus Model
+        super(sBrand);
+        this.model = sMod;
+    }
+    show(){
+        return this.fnPresent() + ', it is a ' + this.model;
+    }
+}
+let sCarbine1 = new Model('HK 91', 'G3K');
+console.log(sCarbine1.show());
+
+
+// ====================================================== //
+// ==================== class get set =================== //
+// ====================================================== //
+class MP {
+    constructor(sBrand){
+        this.sMpName = sBrand;
+    }
+    get cnam(){
+        return this.sMpName;
+    }
+    set cnam(paramX){
+        this.sMpName = paramX;
+    }
+
+}
+let sMP1 = new MP('MP5');
+
+console.log(sMP1.cnam);
+
+// ====================================================== //
+// ====================== class fn ====================== //
+// ====================================================== //
+class Combatpstl {
+    constructor(sName){
+        this.name = sName;
+    }
+    static fnSound(){
+        return 'Click';
+    }
+}
+let sPstl1 = new Combatpstl('P228');
+
+console.log(Combatpstl.fnSound());
+
+// ====================================================== //
+// ====================== class fn param ================ //
+// ====================================================== //
+class ConcealedPstl {
+    constructor(sName){
+        this.name = sName;
+    }
+    static fnSound(sFile1){
+        return 'Click ' + sFile1.name;
+    }
+}
+let sPstl2 = new ConcealedPstl('Rush');
+
+console.log(ConcealedPstl.fnSound(sPstl2));
