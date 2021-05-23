@@ -13,9 +13,13 @@ var fnGetEl = (param1) => {
 let sOutput01 = fnGetEl('#output01');
 
 // ====================================================== //
-// ================== xxx ================== //
+// ================== setInterval( ) ================== //
 // ====================================================== //
 
+let fnShowTime = () => {
+    let sDate = new Date();
+    sOutput01.innerHTML = sDate.getHours() + ":" + sDate.getMinutes() + ":" + sDate.getSeconds();
+}
 
-
+setInterval(fnShowTime, 1000);
 
