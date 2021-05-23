@@ -8,6 +8,9 @@
     <!-------- Bootstrap -------->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css"> -->
+
+     <!-- <script src=./js/changing-html-elements.js></script> -->
+    
 </head>
 
 <body>
@@ -29,9 +32,41 @@
     <p>Enter a number and click OK:</p>
     <input id='id1' type='number' min='1' max='99' required />
     <button id='b3'>OK</button>
+
     <h2>Callback function</h2>
     <button id='b4'>Click me.</button>
 
+    <h2>Get HTML Elements</h2>
+    <div>
+        <div>Output02: </div>
+        <span id='output02Id' class='output02Class'></span>
+    </div>
+    <br />
+    <br />
+    <h3>Get HTML Elements 2</h3> 
+    <div><i>some italic text ...</i></div>
+    <div>Output03: </div>
+    <div id='output03'></div>
+
+    <h3>Get HTML Elements 3</h3> 
+    <div><i class='iClass'>some more italic text ...</i></div>
+    <div>Output04: </div>
+    <div id='output04'></div>
+    
+
+    <h2>Changing HTML Elements</h2>
+    <div>Output05: </div>
+    <div id='output05'></div>
+    <img id="myImage" src="./assets/img/smiley.gif" width="160" height="120">
+
+    <p id='p1' class='p1Class'>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
+    </p>
+
+    <h3>addEventListener( )</h3>
+    <div>Output addEventListener( ): </div>
+    <div id='eventOutput'></div>
+    <button id='eventButtonId'>Click me</button>
 
     <!-------- Bootstrap -------->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -75,8 +110,9 @@
     <!-- <script src=./js/form.js></script> -->
     <!-- <script src=./js/form.js></script> -->
     <!-- <script src=./js/this.js></script> -->
-    <script src=./js/promise.js></script>
-
+    <!-- <script src=./js/promise.js></script> -->
+    <script src=./js/changing-html-elements.js></script>
+    
 </body>
 
 </html>
