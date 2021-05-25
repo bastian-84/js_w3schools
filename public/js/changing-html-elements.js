@@ -61,6 +61,25 @@ document.getElementById('output05').innerHTML = 'innerHTML txt...';
 
 // ====================================================== //
 // ================== Changing HTML Elements ============ //
+// ================== changeText ======================== //
+// ====================================================== //
+let btnChangeTxt = fnGetEl('#btnChangeTxt');
+let output06 = document.getElementById('output06');
+
+let fnInnerHTML = () => {
+    output06.innerHTML = 'Text created with innerHTML...';
+}
+fnInnerHTML();
+
+let fnChangeTxt = () => {
+    output06.innerHTML = 'Text edited via fnChangeTxt( )...';
+}
+btnChangeTxt.addEventListener('click', fnChangeTxt);
+
+
+
+// ====================================================== //
+// ================== Changing HTML Elements ============ //
 // ================== attribute value change ============ //
 // ====================================================== //
 document.getElementById('myImage').src ='https://thisinterestsme.com/LOGO.png?x95127';

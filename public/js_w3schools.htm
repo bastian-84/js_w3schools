@@ -9,8 +9,8 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css"> -->
 
-     <!-- <script src=./js/changing-html-elements.js></script> -->
-    
+    <!-- <script src=./js/changing-html-elements.js></script> -->
+
 </head>
 
 <body>
@@ -43,24 +43,30 @@
     </div>
     <br />
     <br />
-    <h3>Get HTML Elements 2</h3> 
+    <h3>Get HTML Elements 2</h3>
     <div><i>some italic text ...</i></div>
     <div>Output03: </div>
     <div id='output03'></div>
 
-    <h3>Get HTML Elements 3</h3> 
+    <h3>Get HTML Elements 3</h3>
     <div><i class='iClass'>some more italic text ...</i></div>
     <div>Output04: </div>
     <div id='output04'></div>
-    
+
 
     <h2>Changing HTML Elements</h2>
+    <h3>innerHTML</h3>
     <div>Output05: </div>
     <div id='output05'></div>
+    <h3>changeText( )</h3>
+    <button id='btnChangeTxt'>Change Text</button>
+    <div>Output06: </div>
+    <div id='output06'></div>
     <img id="myImage" src="./assets/img/smiley.gif" width="160" height="120">
 
     <p id='p1' class='p1Class'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor
+        a sapien. Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
     </p>
 
     <h3>addEventListener( )</h3>
@@ -68,51 +74,79 @@
     <div id='eventOutput'></div>
     <button id='eventButtonId'>Click me</button>
 
-    <!-------- Bootstrap -------->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
-    <!------ Other scripts ------>
-    <!-- <script src=./js/fn-basics.js></script> -->
-    <!-- <script src=./js/fn-callback-timeout.js></script> -->
-    <!-- <script src=./js/fn-setInterval.js></script> -->
-    <!-- <script src=./js/outputs.js></script> -->
-    <!-- <script src=./js/arrays-1.js></script> -->
-    <!-- <script src=./js/type-of.js></script> -->
-    <!-- <script src=./js/objects-1.js></script> -->
-    <!-- <script src=./js/objects-2.js></script> -->
-    <!-- <script src=./js/objects-3-constructor.js></script> -->
-    <!-- <script src=./js/strings-1.js></script> -->
-    <!-- <script src=./js/numbers-1.js></script> -->
-    <!-- <script src=./js/arr-1.js></script> -->
-    <!-- <script src=./js/arr-3.js></script> -->
-    <!-- <script src=./js/arr-4.js></script> -->
-    <!-- <script src=./js/arr-5.js></script> -->
-    <!-- <script src=./js/date-1.js></script> -->
-    <!-- <script src=./js/date-2.js></script> -->
-    <!-- <script src=./js/math-1.js></script> -->
-    <!-- <script src=./js/boolean.js></script> -->
-    <!--  <script src=./js/switch.js></script> -->
-    <!-- <script src=./js/for-in.js></script> -->
-    <!-- <script src=./js/for-each.js></script> -->
-    <!-- <script src=./js/for-of.js></script> -->
-    <!-- <script src=./js/while.js></script> -->
-    <!-- <script src=./js/break.js></script> -->
-    <!-- <script src=./js/constructor.js></script> -->
-    <!-- <script src=./js/typecasting.js></script> -->
-    <!-- <script src=./js/regExpr.js></script> -->
-    <!-- <script src=./js/debugging.js></script> -->
-    <!-- <script src=./js/strict.js></script> -->
-    <!-- <script src=./js/class.js></script> -->
-    <!-- <script src=./js/json.js></script> -->
-    <!-- <script src=./js/debugging-2.js></script> -->
-    <!-- <script src=./js/form.js></script> -->
-    <!-- <script src=./js/form.js></script> -->
-    <!-- <script src=./js/this.js></script> -->
-    <!-- <script src=./js/promise.js></script> -->
-    <script src=./js/changing-html-elements.js></script>
+    <h2>Animation</h2>
+    <button id='aniBtn'>Animate</button>
+    <div id="aniContainer">
+        <div id="animate"></div>
+    </div>
+    <h3>onchange( )</h3>
+    Enter your name: <input type="text" id="fname" />
+    <h3>onmouseover( )</h3>
+    <div class='onmouseOverBox'>
+        Mouse Over Me</div>
+
+    <h3>click( )</h3>
+    <div class='onClickBox'>
+        Click Me</div>
+    <h3>resize( ) the window</h3>
+    <div>Output07: </div>
+    <div id='output07'></div>
+    <h3>mousemove( )</h3>
+    <div class='mouseMoveBox'></div>
+
+    <h2 id='id01'>Nodes</h2>
+    <div id='nElement'></div>
+    <div id='nElement2'></div>
     
+    <!-------- Bootstrap -------->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js">
+        </script>
+        <!------ Other scripts ------>
+        <!-- <script src=./js/fn-basics.js></script> -->
+        <!-- <script src=./js/fn-callback-timeout.js></script> -->
+        <!-- <script src=./js/fn-setInterval.js></script> -->
+        <!-- <script src=./js/outputs.js></script> -->
+        <!-- <script src=./js/arrays-1.js></script> -->
+        <!-- <script src=./js/type-of.js></script> -->
+        <!-- <script src=./js/objects-1.js></script> -->
+        <!-- <script src=./js/objects-2.js></script> -->
+        <!-- <script src=./js/objects-3-constructor.js></script> -->
+        <!-- <script src=./js/strings-1.js></script> -->
+        <!-- <script src=./js/numbers-1.js></script> -->
+        <!-- <script src=./js/arr-1.js></script> -->
+        <!-- <script src=./js/arr-3.js></script> -->
+        <!-- <script src=./js/arr-4.js></script> -->
+        <!-- <script src=./js/arr-5.js></script> -->
+        <!-- <script src=./js/date-1.js></script> -->
+        <!-- <script src=./js/date-2.js></script> -->
+        <!-- <script src=./js/math-1.js></script> -->
+        <!-- <script src=./js/boolean.js></script> -->
+        <!--  <script src=./js/switch.js></script> -->
+        <!-- <script src=./js/for-in.js></script> -->
+        <!-- <script src=./js/for-each.js></script> -->
+        <!-- <script src=./js/for-of.js></script> -->
+        <!-- <script src=./js/while.js></script> -->
+        <!-- <script src=./js/break.js></script> -->
+        <!-- <script src=./js/constructor.js></script> -->
+        <!-- <script src=./js/typecasting.js></script> -->
+        <!-- <script src=./js/regExpr.js></script> -->
+        <!-- <script src=./js/debugging.js></script> -->
+        <!-- <script src=./js/strict.js></script> -->
+        <!-- <script src=./js/class.js></script> -->
+        <!-- <script src=./js/json.js></script> -->
+        <!-- <script src=./js/debugging-2.js></script> -->
+        <!-- <script src=./js/form.js></script> -->
+        <!-- <script src=./js/form.js></script> -->
+        <!-- <script src=./js/this.js></script> -->
+        <!-- <script src=./js/promise.js></script> -->
+        <!-- <script src=./js/changing-html-elements.js></script> -->
+        <!-- <script src=./js/animation.js></script> -->
+        <!-- <script src=./js/dom-events.js></script> -->
+        <script src=./js/nodes.js></script>
+
 </body>
 
 </html>

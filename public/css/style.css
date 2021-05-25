@@ -21,3 +21,33 @@ small {
 small a:visited {
   color: #06f;
 }
+#aniContainer {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: #0b552c;
+}
+#aniContainer #animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: #3700ff;
+}
+.onmouseOverBox {
+  background-color: #385ed9;
+  width: 120px;
+  height: 20px;
+  padding: 40px;
+}
+.onClickBox {
+  background-color: #385ed9;
+  width: 120px;
+  height: 20px;
+  padding: 40px;
+}
+.mouseMoveBox {
+  background-color: #385ed9;
+  width: 120px;
+  height: 20px;
+  padding: 40px;
+}
